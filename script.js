@@ -1,4 +1,5 @@
 let color = "black";
+let click = false;
 
 function populateBoard(size) {
   let board = document.querySelector(".board");
@@ -27,11 +28,13 @@ function changeSize(input) {
 }
 
 function colorSquare() {
-  if (color === "random") {
-    let randomColor = `#${Math.floor(Math.random() * 16777215).toString(16)}`;
-    this.style.backgroundColor = randomColor;
-  } else {
-    this.style.backgroundColor = color;
+  if (click) {
+    if (color === "random") {
+      let randomColor = `#${Math.floor(Math.random() * 16777215).toString(16)}`;
+      this.style.backgroundColor = randomColor;
+    } else {
+      this.style.backgroundColor = color;
+    }
   }
 }
 
@@ -44,3 +47,7 @@ function resetBoard() {
   let squares = board.querySelectorAll("div");
   squares.forEach((div) => (div.style.backgroundColor = "white"));
 }
+
+document.querySelector("body").addEventListener("click", () => {
+  click = !click;
+});
