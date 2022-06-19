@@ -11,23 +11,11 @@ theOneFunction();
 
 //let rows = cols = askUser();
 
-
+console.log("after askUSer " + rows)
 
 function theOneFunction() {
-  let numberSquares = window.prompt("How many squares per side?");
-  
-  if (numberSquares > 100) {
-    alert ("Pick a number lower than 100!")
-    let numberSquares = window.prompt("How many squares per side?");
-  } else {
-    container.style.setProperty("--grid-rows", numberSquares);
-    container.style.setProperty("--grid-cols", numberSquares);
-    for (c = 0; c < numberSquares * numberSquares; c++) {
-      let cell = document.createElement("div");
-      cell.innerText = c + 1; // cell counter
-      container.appendChild(cell).className = "grid-item";
-    }
-  }
+  let numberSquares = askUser();
+  makeRows(numberSquares, numberSquares);
 };
 
 
@@ -59,7 +47,8 @@ function makeRows(rows, cols) {
     cell.innerText = c + 1; // cell counter
     container.appendChild(cell).className = "grid-item";
     }
-  };
+  }
+};
 
 
 

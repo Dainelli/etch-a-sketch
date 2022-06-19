@@ -13,12 +13,53 @@
   </head>
 
   <body>
-    <button>Choose amount of squares per line</button>
+    <button href="./script.js" onclick="theOneFunction()">Choose amount of squares per line</button>
         <div id="container"></div>
 
 
     
-  <script src="./script.js"></script>
+  <!-- <script src="./script.js"></script> -->
+    
+    <script>
+    let numberSquares = 16
+    console.log(numberSquares)
+    
+    makeRows(numberSquares, numberSquares)
 
+    function theOneFunction() {
+      let previousGrid = container.querySelectorAll('.gridItem');
+      previousGrid.forEach(gridItem => {
+        gridItem.remove();
+      });
+      
+      let numberSquares = window.prompt("How many squares per side?");
+      
+      while (numberSquares >= 100) {
+        alert ("Pick a number lower than 100!")
+        let numberSquares = window.prompt("How many squares per side?");
+      } 
+      if (numberSquares < 100) {
+        container.style.setProperty("--grid-rows", numberSquares);
+        container.style.setProperty("--grid-cols", numberSquares);
+        for (c = 0; c < numberSquares * numberSquares; c++) {
+          let cell = document.createElement("div");
+          cell.innerText = c + 1; // cell counter
+          container.appendChild(cell).className = "gridItem";
+        }
+      }
+    };
+    
+    function makeRows(rows, cols) {
+      console.log("in function " + rows)
+      container.style.setProperty("--grid-rows", rows);
+      container.style.setProperty("--grid-cols", cols);
+      for (c = 0; c < rows * cols; c++) {
+        let cell = document.createElement("div");
+        cell.innerText = c + 1; // cell counter
+        container.appendChild(cell).className = "gridItem";
+        }
+      };
+    
+    </script>
   </body>
 </html>

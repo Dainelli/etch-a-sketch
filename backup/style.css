@@ -11,7 +11,7 @@
   grid-template-columns: repeat(var(--grid-cols), 0fr);
 }
 
-.gridItem {
+.grid-item {
   height: 3em;
   width: 3em;
   border: 1px solid red;
@@ -19,6 +19,6 @@
 }
 
 /* Set up a “hover” effect so that the grid divs change color when your mouse passes over them, leaving a (pixelated) trail through your grid like a pen would. */
-.gridItem:hover {
+.grid-item:hover {
   background-color: #8f8f8f;
 }
