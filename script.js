@@ -9,7 +9,7 @@ makeRows(16, 16);
 
 theOneFunction();
 
-//let rows = cols = askUser();
+
 
 
 
@@ -25,7 +25,7 @@ function theOneFunction() {
     for (c = 0; c < numberSquares * numberSquares; c++) {
       let cell = document.createElement("div");
       cell.innerText = c + 1; // cell counter
-      container.appendChild(cell).className = "grid-item";
+      container.appendChild(cell).className = "gridItem";
     }
   }
 };
