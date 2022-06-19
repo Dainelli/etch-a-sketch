@@ -5,7 +5,8 @@ console.log("container, motherf*cker");
 // Add a button to the top of the screen that will send the user a popup asking for the number of squares per side for the new grid. Once entered, the existing grid should be removed and a new grid should be generated in the same total space as before (e.g. 960px wide) so that you’ve got a new sketch pad. Tip: Set the limit for the user input to a maximum of 100. A larger number of squares results in more computer resources being used, potentially causing delays, freezing, or crashing that we want to prevent.
 let numberSquares;
 
-//makeRows(16, 16);
+makeRows(16, 16);
+
 
 
 let rows = cols = askUser();
@@ -33,16 +34,17 @@ function askUser () {
 
 function makeRows(rows, cols) {
   console.log("in function " + rows)
-  if (rows <=100 && cols <= 100) {
-    container.style.setProperty("--grid-rows", rows);
-    container.style.setProperty("--grid-cols", cols);
-    for (c = 0; c < rows * cols; c++) {
-      let cell = document.createElement("div");
-      cell.innerText = c + 1; // cell counter
-      container.appendChild(cell).className = "grid-item";
+  container.style.setProperty("--grid-rows", rows);
+  container.style.setProperty("--grid-cols", cols);
+  for (c = 0; c < rows * cols; c++) {
+    let cell = document.createElement("div");
+    cell.innerText = c + 1; // cell counter
+    container.appendChild(cell).className = "grid-item";
     }
   }
 };
+
+
 
 
 //Add a button to the top of the screen that will send the user a popup asking for the number of squares per side for the new grid. Once entered, the existing grid should be removed and a new grid should be generated in the same total space as before (e.g. 960px wide) so that you’ve got a new sketch pad. Tip: Set the limit for the user input to a maximum of 100. A larger number of squares results in more computer resources being used, potentially causing delays, freezing, or crashing that we want to prevent.
