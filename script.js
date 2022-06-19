@@ -21,9 +21,11 @@ populateBoard(16);
 
 function changeSize(input) {
   if (1 < input && input < 100) {
+    document.querySelector(".error").style.display = "none";
     populateBoard(input);
   } else {
-    alert("Please enter a number between 1 and 100");
+    document.querySelector(".error").style.display = "flex";
+    //alert("Please enter a number between 1 and 100");
   }
 }
 
