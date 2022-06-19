@@ -1,30 +1,5 @@
-:root {
-  --grid-cols: 1;
-  --grid-rows: 1;
-}
-
-body {
-  min-height: 100vh;
-  min-width: 100vw;
-}
-
-#container {
-  width: 800px;
-  height: 800px;
+.board {
+  width: 500px;
+  height: 500px;
   display: grid;
-  border: 1px solid green;
-  grid-template-rows: repeat(auto-fill, var(--grid-rows), 0fr);
-  grid-template-columns: repeat(var(--grid-cols), 0fr);
-}
-
-.gridItem {
-  /**
-  height: (100 / var(--grid-rows));*/
-  width: 5em;
-  border: 1px solid red;
-}
-
-/* Set up a “hover” effect so that the grid divs change color when your mouse passes over them, leaving a (pixelated) trail through your grid like a pen would. */
-.gridItem:hover {
-  background-color: #8f8f8f;
 }
