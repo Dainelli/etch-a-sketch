@@ -1,6 +1,6 @@
 # etch-a-sketchDon’t forget to commit early & often! You can reference the Commit Message lesson here!
 
-1. Follow the instructions atop Odin’s Recipes project to set up a Git repository for this project.
+1. Follow the instructions atop Odin’s Recipes project to <b>set up a Git repository</b> for this project.
 2. Create a webpage with a 16x16 grid of square divs.
     a. Create the divs using JavaScript. Don’t try making them by hand with copy and pasting in your HTML file!
     b. It’s best to put your grid squares inside another “container” div (which can go directly in your HTML).
@@ -16,7 +16,7 @@
      c. Check if there are any errors in the JavaScript console.
      d. Check your “elements” pane to see if the elements have actually shown up but are somehow hidden.
      e. Go willy-nilly and add console.log statements in your JavaScript to see if it’s actually being loaded.
-3. Set up a “hover” effect so that the grid divs change color when your mouse passes over them, leaving a (pixelated) trail through your grid like a pen would.
+3. <b>Set up a “hover” effect</b> so that the grid divs change color when your mouse passes over them, leaving a (pixelated) trail through your grid like a pen would.
     a. Hint: “Hovering” is what happens when your mouse enters a div and ends when your mouse leaves it. You can set up event listeners for either of those events as a starting point.
     b. There are multiple ways to change the color of the divs, including:
      a. adding a new class to the div.
